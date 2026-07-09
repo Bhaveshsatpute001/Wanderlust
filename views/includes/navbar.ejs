@@ -1,0 +1,78 @@
+<style>
+  .btn-search {
+    background-color: #fe424d;
+    color: #fff;
+    width: 8rem;
+    border-radius: 25px;
+  
+  }
+
+  .btn-search:hover {
+    background-color: #fe424d;
+    color: #fff;
+  }
+
+  .search-inp{
+     border-radius: 25px;
+     padding: 0.1rem 2rem 0.1rem 2rem;
+  }
+ 
+
+  .search-glass{
+    display: inline;
+  }
+
+  .searchBox{
+    height: 3rem;
+    margin-left: 1.5rem;
+  }
+</style>
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+
+        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link" href="/listings/new">Add new Listing</a>
+
+
+        <div class="navbar-nav searchBox">
+          <form class="d-flex" role="search" action="">
+            <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" name="" id="" a>
+            <button class="btn btn-search" type="submit"> <i class=" search-glass fa-solid fa-magnifying-glass"></i> Search</button>
+          </form>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="navbar-nav ms-auto">
+        <% if(!currUser) { %>
+          <a class="nav-link " href="/signup"><b>Sign up</b></a>
+          <a class="nav-link" href="/login"><b>Login</b></a>
+          <% } %>
+
+            <% if(currUser) { %>
+              <a class="nav-link" href="/logout"><b>Logout</b></a>
+              <% } %>
+
+      </div>
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
